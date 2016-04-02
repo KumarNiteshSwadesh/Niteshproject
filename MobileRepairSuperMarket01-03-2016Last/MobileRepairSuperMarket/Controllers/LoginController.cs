@@ -18,7 +18,7 @@ namespace MobileRepairSuperMarket.Controllers
         }
         public ActionResult NewRegistration(Property p)
         {
-            p.UserId = "0";
+            p.UserId = "0";//this is userid
             int result = dl.INSERT_UPDATE_USER_REGISTRATION(p);
             if(result>0)
             {
