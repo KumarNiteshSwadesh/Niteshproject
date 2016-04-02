@@ -1,0 +1,255 @@
+﻿@model MobileRepairSuperMarket.Models.Property
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var info = Model;
+}
+@if (TempData["MSG"] != null)
+{
+    <div class="alert alert-info alert-dismissable">
+        <button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button>
+        <strong>@TempData["MSG"]</strong>
+    </div>
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-xs-12 col-sm-12 mt40 mb20">
+            <div class="form-body pal form-border">               
+
+                <h4>Register</h4>
+
+                @using (Html.BeginForm("NewRegistration", "Login", FormMethod.Post, new { @class = "form-horizontal", @enctype = "multipart-formdata" }))
+                {
+                    <div class="form-body pal">
+                        <div class="form-group">
+
+                            <div class="col-md-6">
+                                <label>First Name </label>
+                                @Html.TextBoxFor(model => model.FirstName, new {@autocomplete="off", @placeholder = "First Name", @class = "form-control characters_only required" })
+                            </div>
+                            <div class="col-md-6">
+                                <label>Middle Name </label>
+                                @Html.TextBoxFor(model => model.MiddleName, new { @autocomplete = "off", @placeholder = "Middle Name", @class = "form-control characters_only" })
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                <label>Last Name </label>
+                                @Html.TextBoxFor(model => model.LastName, new { @autocomplete = "off", @placeholder = "Last Name", @class = "form-control characters_only" })
+                            </div>
+                            <div class="col-md-6">
+                                <label>Email ID</label>
+                                @Html.TextBoxFor(model => model.EmailID, new { @autocomplete = "off", @placeholder = "Email ID", @type = "email", @class = "form-control email_required" })
+                                <div id="MSG1" class="text-red"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                <label>Password</label>
+                                @Html.TextBoxFor(model => model.Password, new { @autocomplete = "off", @type = "password", @placeholder = "Password", @class = "form-control required" })
+                            </div>
+                            <div class="col-md-6">
+                                <label>Confirm Password</label>
+                                @Html.TextBoxFor(model => model.CnfPassword, new { @autocomplete = "off", @type = "password", @placeholder = "Confirm Password", @class = "form-control required" })
+                                <div id="MSG2" class="text-red"></div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                <label>Date Of  Birth</label>
+                                @Html.TextBoxFor(model => model.DOB, new { @autocomplete = "off", @placeholder = "DD MMM YYYY", @required = "required", @type = "date", @class = "datepicker form-control" })
+                            </div>
+                            <div class="col-md-6">
+                                <label>Gender</label>
+                                @Html.DropDownListFor(model => model.Gender,
+                                new List<SelectListItem>
+                                    {
+                                    new SelectListItem { Text="MALE", Value="MALE"},
+                                    new SelectListItem { Text="FEMALE", Value="FEMALE"},
+                                    new SelectListItem { Text="EITHER", Value="EITHER"}
+                                    }
+                                    , new { @class = "form-control" }
+                                    )
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                <label>Contact No</label>
+                                @Html.TextBoxFor(model => model.ContactNo, new { @autocomplete = "off", @placeholder = "Contact No", @class = " form-control number" })
+
+                            </div>
+                            <div class="col-md-6">
+                                <label> Alternet Contact No</label>
+                                @Html.TextBoxFor(model => model.AltContactNo, new { @autocomplete = "off", @placeholder = "Alternet Contact No", @class = "form-control number" })
+
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label>Address</label>
+                                @Html.TextAreaFor(model => model.Address, new { @autocomplete = "off", @placeholder = "Address", @class = " form-control", @rows = 8 })
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                <label>Country</label>
+                                @*@Html.DropDownListFor(model => model.Country, ViewBag.CountryList as SelectList, HtmlAttributes.AnonymousObjectToHtmlAttributes(new { @class = "selectpicker form-control required", @data_style = "btn-white", @data_live_search = "true", @required = "required" }))*@
+                                @Html.DropDownListFor(model => model.Country,
+                                new List<SelectListItem>
+                                    {
+                                    new SelectListItem { Text="India", Value="1"},
+                                    new SelectListItem { Text="Srilanka", Value="2"},
+
+                                    }
+                                    , new { @class = "form-control" }
+                                    )
+                            </div>
+                            <div class="col-md-6">
+                                <label> State</label>
+                                @*@Html.DropDownListFor(model => model.State, ViewBag.StateList as SelectList, new { @class = "form-control required" })*@
+                                @Html.DropDownListFor(model => model.State,
+                                new List<SelectListItem>
+                                    {
+                                    new SelectListItem { Text="West Bengal", Value="1"},
+                                    new SelectListItem { Text="Karnataka", Value="2"},
+
+                                    }
+                                    , new { @class = "form-control" }
+                                    )
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                <label> City</label>
+                                @*@Html.DropDownListFor(model => model.City, ViewBag.CityList as SelectList, new { @class = "form-control required" })*@
+                                @Html.DropDownListFor(model => model.City,
+                                new List<SelectListItem>
+                                    {
+                                    new SelectListItem { Text="Durgapur", Value="1"},
+                                    new SelectListItem { Text="Kolkata", Value="2"},
+
+                                    }
+                                    , new { @class = "form-control" }
+                                    )
+                            </div>
+                            <div class="col-md-6">
+                                <label>Status</label>
+                                @Html.DropDownListFor(model => model.Status,
+                                new List<SelectListItem>
+                                    {
+                                    new SelectListItem { Text="ACTIVE", Value="ACTIVE"},
+                                    new SelectListItem { Text="DEACTIVE", Value="DEACTIVE"},
+
+                                    }
+                                    , new { @class = "form-control" }
+                                    )
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <div class="col-md-6">
+                                <label> Zip Code</label>
+                                @Html.TextBoxFor(model => model.ZipCode, new { @autocomplete = "off", @placeholder = "Zip Code", @class = "form-control required" })
+                            </div>
+                            <div class="col-md-6">
+                                <label> Profile Pic</label>
+                                <input type="file" name="Customer" class="form-control" id="Customer" />
+                                <p id="profile_pic" style="color:#f00"></p>
+                            </div>
+                        </div>
+
+                        @*<div class="form-group">
+                        <div class="col-md-6">
+                            <label> Profile Pic</label>
+                            <input type="file" name="Customer" class="form-control" id="Customer" />
+                            <p id="profile_pic" style="color:#f00"></p>
+                        </div>
+                        <div class="col-md-4">
+                            @*<img src="@info.profilepic" id="blsh" style="height:150px; width:150px;" />
+                        </div>
+                    </div>*@
+
+                        <div class="form-group">
+
+
+                            <div class="col-md-10">
+                                <label></label>
+                                <input id="Submit1" type="submit" class="btn btn-success" value="SUBMIT" />
+                            </div>
+                        </div>
+                    </div>
+
+                }
+
+            </div>
+
+            <div class="clearfix"></div>
+
+        </div>
+
+        <div class="col-md-4 col-xs-12 col-sm-12 mt40 form-border">
+            <div class="form-body pal">
+                <h4>Login</h4>
+                @using (Html.BeginForm("Login", "Login", FormMethod.Post, new { @class = "form-horizontal", @enctype = "multipart-formdata" }))
+                {
+                    <div class="form-body pal">
+
+
+
+                        <div class="form-group">
+
+                            <div class="col-md-12">
+                                <label>Email ID</label>
+                                @Html.TextBoxFor(model => model.EmailID, new { @placeholder = "Email ID", @type = "email", @class = "form-control email_required" })
+                                <div id="MSG1" class="text-red"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label>Password</label>
+                                @Html.TextBoxFor(model => model.Password, new { @type = "password", @placeholder = "Password", @class = "form-control required" })
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+
+                            <div class="col-md-10">
+                                <label></label>
+                                <input id="Submit1" type="submit" class="btn btn-success" value="LOGIN" /><p>Forgot Password?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+
+            </div>
+            <div class="clearfix"></div>
+
+
+
+        </div>
+    </div>
+</div>

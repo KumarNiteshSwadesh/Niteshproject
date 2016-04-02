@@ -1,0 +1,333 @@
+﻿@model MobileRepairSuperMarket.Models.Property
+@{
+    //ViewBag.Title = "_Layout";
+}
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<!doctype html>
+<!--[if IE 9]> <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js " lang="en">
+<!--<![endif]-->
+<head>
+    <!-- basic page needs -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>MobileRepairSupermarket ..</title>
+    <meta name="description" content="">
+    <!-- mobile meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="~/css/meanmenu.min.css">
+    <link rel="stylesheet" href="~/css/jquery-ui-slider.css">
+    <link rel="stylesheet" href="~/css/nivo-slider.css">
+    <link rel="stylesheet" href="~/css/owl.transitions.css">
+    <link rel="stylesheet" href="~/css/owl.theme.css">
+    <link rel="stylesheet" href="~/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/css/animate.css">
+    <link href='http://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css' />
+    @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">*@
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/responsive.css">
+    <script src="~/js/vendor/modernizr-2.6.2.min.js"></script>
+
+    <!--[if lt IE 9]>
+                  <script src="js/vendor/html5shiv.min.js"></script>
+                  <script src="js/vendor/respond.min.js"></script>
+                <![endif]-->
+</head>
+<body class="index-2">
+    <!--[if lt IE 8]>
+                    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+                <![endif]-->
+    <!-- Add your site or application content here -->
+    <!-- header-area start -->
+    <header class="header-area">
+        <!-- header-top start -->
+        <!-- header-top end -->
+        <!-- header-middle start -->
+        <div class="header-middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2">
+                        <!-- logo start -->
+                        <div class="logo"> <a href="#"><img src="img/logo.png" alt="logo" /></a> </div>
+                        <!-- logo end -->
+                    </div>
+                    <div class="col-xs-12 col-md-10">
+                        <!-- category search start -->
+                        <div class="category-search-area">
+                            <div class="search-form">
+                                <form action="#" method="post">
+                                    <a href="#" class="cat-search-btn"><i><img src="img/search-icon.png" alt="img"></i></a>
+                                    <input class="cat-search-box" type="text" placeholder="Enter Postcode" />
+                                </form>
+                            </div>
+                            <div class="search-cat">
+                                <select>
+                                    <option value="1">Distance</option>
+                                    <option value="2">1 km</option>
+                                    <option value="2">2 km</option>
+                                    <option value="3">3 km</option>
+                                    <option value="3">4 km</option>
+                                </select>
+                            </div>
+                            <a class="add-tag-btn" href="#">Search Repair Centre</a>
+                        </div>
+                        <!-- category search end -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header-middle end -->
+        <!-- header-bottom start -->
+        <div class="header-bottom">
+            <div class="container">
+                <div class="row">
+                    <!-- left-category-menu-area start -->
+                    <div class="col-xs-12 col-md-3">
+                        <div class="left-category-menu-area">
+                            <h3 class="cat-toggle-heading mb0">category</h3>
+                            <div class="left-category-menu left-category-menu-home-2">
+                                <ul>
+                                    <li>
+                                        <a href="#">Mobile Repair</a>
+                                        <p>Extensive Repair done for mobile phone</p>
+                                        <div class="left-cat-dropdown left-cat-1">
+                                            <div class="single-cat-dropdown">
+                                                <div class="single-cat-item"> <a href="#" class="single-cat-dropdown-title">Menu Headline</a> <a href="#">Accessories</a> <a href="#">Car Electronics</a> <a href="#">Cell Phones</a> <a href="#">Desktops & Key</a> </div>
+                                                <div class="single-cat-item"> <a href="#" class="single-cat-dropdown-title">Menu Headline</a> <a href="#">Accessories</a> <a href="#">Car Electronics</a> <a href="#">Cell Phones</a> <a href="#">Desktops & Key</a> </div>
+                                            </div>
+                                            <div class="single-cat-dropdown">
+                                                <div class="single-cat-item"> <a href="#" class="single-cat-dropdown-title">Menu Headline</a> <a href="#">Accessories</a> <a href="#">Car Electronics</a> <a href="#">Cell Phones</a> <a href="#">Desktops & Key</a> </div>
+                                                <div class="single-cat-item"> <a href="#" class="single-cat-dropdown-title">Menu Headline</a> <a href="#">Accessories</a> <a href="#">Car Electronics</a> <a href="#">Cell Phones</a> <a href="#">Desktops & Key</a> </div>
+                                            </div>
+                                            <div class="single-cat-dropdown"> <a href="#"><img src="img/add/11.jpg" alt="product image" /></a> </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Mobile Accessery</a>
+                                        <p>Shop for Mobile Accessery all styles includin</p>
+                                        <div class="left-cat-dropdown left-cat-2">
+                                            <div class="single-cat-dropdown">
+                                                <div class="single-cat-item"> <a href="#" class="single-cat-dropdown-title">Menu Headline</a> <a href="#">Video & Home</a> <a href="#">Home Surveillance</a> <a href="#">Cell Phones</a> <a href="#">Desktops & Key</a> </div>
+                                                <div class="single-cat-item"> <a href="#" class="single-cat-dropdown-title">Menu Headline‎</a> <a href="#">Lingerie</a> <a href="#">Electronics</a> <a href="#">Home Telephones</a> <a href="#">Desktops & Key</a> </div>
+                                            </div>
+                                            <div class="single-cat-dropdown">
+                                                <div class="single-cat-item"> <a href="#" class="single-cat-dropdown-title">Menu Headline</a> <a href="#">Communication</a> <a href="#">Handbag</a> <a href="#">Vintage Electronics</a> <a href="#">Desktops & Key</a> </div>
+                                                <div class="single-cat-item"> <a href="#" class="single-cat-dropdown-title">Menu Headline</a> <a href="#">Funiture</a> <a href="#">Car Electronics</a> <a href="#">Lifestyle</a> <a href="#">Desktops & Key</a> </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="more-cat"> <span class="more-view">More Categories</span> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- left-category-menu-area end -->
+                    <!-- mainmenu start -->
+                    <div class="col-xs-12 col-md-9">
+                        <div class="mainmenu">
+                            <nav>
+                                <ul class="mb0">
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Buy</a></li>
+                                    <li><a href="#">Repair</a></li>
+                                    <li>
+                                        <a href="#">Sell Your Phone</a><i class="fa fa-angle-down"></i>
+                                        <div class="mega-menu">
+                                            <div class="single-mega-menu">
+                                                <div class="single-mega-menu-item"> <a href="#" class="single-megamenu-title">User Interface</a> <a href="/Login">Sign In</a> <a href="/Login">Login</a></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <!-- mainmenu end -->
+                </div>
+                <!-- mobile menu start -->
+                <div class="row">
+                    <div class="col-sm-12 mobile-menu-area">
+                        <div class="mobile-menu hidden-md hidden-lg" id="mob-menu">
+                            <span class="mobile-menu-title">Menu</span>
+                            <nav>
+                                <ul>
+                                    <li> <a href="#">Home</a> </li>
+                                    <li><a href="#">Buy</a></li>
+                                    <li><a href="#">Repair</a></li>
+                                    <li>
+                                        <a href="#">Sell Your Phone</a>
+                                        <ul>
+                                            <li><a href="/Login">Sign In</a></li>
+                                            <li><a href="/Login">Login</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <br>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <!-- mobile menu end -->
+            </div>
+        </div>
+        <!-- header-bottom end -->
+      
+    </header>
+    <!-- header-area end -->
+   
+
+    
+    @RenderBody()
+   
+    
+
+    <!-- footer-area start -->
+    <footer class="footer-area">
+        <!-- footer-top start -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                        <!-- single-footer start -->
+                        <div class="single-footer">
+                            <h2>My Account</h2>
+                            <ul>
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">Log in</a></li>
+                                <li><a href="#">My Cart</a></li>
+                                <li><a href="#">My Wishlist</a></li>
+                                <li><a href="#">Checkout</a></li>
+                                <li><a href="#">Userinfor</a></li>
+                            </ul>
+                        </div>
+                        <!-- single-footer end -->
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                        <!-- single-footer start -->
+                        <div class="single-footer">
+                            <h2>Support</h2>
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Delivery</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Sale products</a></li>
+                            </ul>
+                        </div>
+                        <!-- single-footer end -->
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 hidden-sm hidden-xs">
+                        <!-- single-footer start -->
+                        <div class="single-footer">
+                            <h2>Information</h2>
+                            <ul>
+                                <li><a href="#">Sitemap</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Your Account</a></li>
+                                <li><a href="#">Advanced</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <!-- single-footer end -->
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <!-- single-footer start -->
+                        <div class="single-footer">
+                            <h2>Contact Us</h2>
+                            <div class="address-info">
+                                <p><strong>Address: </strong> <span> 123 Main Street, Anytown, CA 12345 USA.</span></p>
+                                <p><strong>Phone: </strong> <span> 8801973 - 833 508</span></p>
+                                <p><strong>Fax: </strong> <span> (800) 123 456 789</span></p>
+                                <p><strong>Email: </strong> <span> <a href="mailto:mr-supermarket.com">mr-supermarket.com</a></span></p>
+                            </div>
+                        </div>
+                        <!-- single-footer end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer-top end -->
+        <!-- footer middle start -->
+        <div class="footer-middle">
+            <div class="container">
+                <div class="t-b-border">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-4"> </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="social-share">
+                                <div class="social-icon">
+                                    <h2>follow</h2>
+                                    <ul>
+                                        <li><a class="tw" href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a class="gp" href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a class="fb" href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a class="li" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a class="yu" href="#"><i class="fa fa-youtube"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer middle end -->
+        <!-- footer bottom start -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="copy-right-area">
+                            <p class="copy-right">&copy; Copyright 2016 Mobile Repair Supermarket</a>. All Rights Reserved</p>
+                        </div>
+                        <!-- scroll-to-top-start -->
+                        <div class="scroll-to-top"> <a href="#" class="greentech-scrollertop">scroll</a> </div>
+                        <!-- scroll-to-top-end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer bottom end -->
+    </footer>
+    <!-- footer-area end -->
+
+    <script src="~/js/vendor/jquery-1.11.3.min.js"></script>
+    <script src="~/js/jqueryui.js"></script>
+    <script src="~/js/jquery.meanmenu.js"></script>
+    <script src="~/js/jquery.fancybox.js"></script>
+    <script src="~/js/jquery.elevatezoom.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/jquery.nivo.slider.pack.js"></script>
+    <script src="~/js/jquery.counterup.min.js"></script>
+    <script src="~/js/wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <!-- main js -->
+    <!--Browse -->
+    <script src="~/js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/css/left-toggle-menu.css">
+    <script src="~/js/bs_leftnavi.js"></script>
+</body>
+</html>
