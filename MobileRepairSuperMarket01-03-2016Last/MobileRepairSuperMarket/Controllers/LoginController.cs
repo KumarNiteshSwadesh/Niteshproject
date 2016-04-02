@@ -18,7 +18,7 @@ namespace MobileRepairSuperMarket.Controllers
         }
         public ActionResult NewRegistration(Property p)
         {
-            p.UserId = "0";//this is userid
+            p.UserId = "0";
             int result = dl.INSERT_UPDATE_USER_REGISTRATION(p);
             if(result>0)
             {
@@ -27,5 +27,16 @@ namespace MobileRepairSuperMarket.Controllers
             }
             return View("/LOgin");
         }
+        //public ActionResult NewRegistration(Property p)
+        //{
+        //    p.UserId = "0";
+        //    int result = dl.INSERT_UPDATE_USER_REGISTRATION(p);
+        //    if (result > 0)
+        //    {
+        //        TempData["MSG"] = "Data Saved Successfully.";
+        //        ModelState.Clear();
+        //    }
+        //    return View("/LOgin");
+        //}
     }
 }
